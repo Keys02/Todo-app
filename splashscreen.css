@@ -1,0 +1,102 @@
+/*Splashscreen styling*/
+*{
+    box-sizing:border-box
+}
+
+body{
+    background-color:rgb(71, 1, 71);
+    font-family:poppins,Helvetica,sans-serif;
+    margin:0px;
+    padding:0px;
+}
+
+img.todo-icon{
+    width:400px;
+    height:350px;
+    margin-left:30px;
+    animation-name:rotate-logo;
+    animation-duration:1.5s;
+    animation-fill-mode:forwards
+}
+
+div#splashscreen-container{
+    height:100vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+}
+
+div.progress-bar{
+    position:absolute;
+    margin-top:10px;
+    background-color:white;
+    height:20px;
+    border-radius:8px;
+    width:410px;
+}
+
+/*Animated element*/
+div.second-progress-bar{
+    position:absolute;
+    background-color:rgb(44, 150, 249);
+    width:0px;
+    height:20px;
+    border-radius:8px;
+    margin-top:10px;
+    animation-name:loading;
+    animation-duration:3s;
+    animation-delay:1.65s;
+    animation-fill-mode:forwards;
+    animation-timing-function:ease
+}
+
+/*Animated element*/
+p.loading{
+    color:white;
+    text-align:center;
+    font-size:30px;
+    margin-top:0px;
+    font-weight:bolder;
+    animation-name:jump-loading-text;
+    animation-duration:0.9s;
+    animation-delay:1.65s;
+    animation-iteration-count:infinite;
+}
+
+
+/*Loading text animation*/
+@keyframes jump-loading-text{
+    from{
+        transform:translateY(20px)
+    }
+    to{
+        transform:translateY(0px)
+    }
+}
+
+
+/*Progress bar animation*/
+@keyframes loading{
+    from{
+        width:0px;
+    }
+    to{
+        width:410px;
+    }
+}
+
+@keyframes rotate-logo{
+    from{
+        width:0px;
+        height:0px;
+        opacity:0;
+        tranform:rotate(0deg)
+    }
+    to{
+        width:400px;
+        opacity:1;
+        transform:rotate(360deg)
+    }
+}
+
+/*Splashscreen styling*/

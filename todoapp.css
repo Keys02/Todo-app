@@ -1,0 +1,280 @@
+/*--------------------------------------
+            Reset section
+----------------------------------------*/
+html {
+    box-sizing: border-box;
+}
+
+*, *::before, *::after {
+    box-sizing: inherit;
+}
+
+/*--------------------------------------
+            General section
+----------------------------------------*/
+body {
+    margin: 0px;
+    padding: 0px;
+    font-family: poppins, Helvetica, sans-serif;
+    /* background-color: rgb(71, 1, 71); */
+    background-image: url("background-2.jpg");
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+}
+
+/*--------------------------------------
+            Main section
+----------------------------------------*/
+.todo-app-container {
+    padding-top: 10px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.main-todo-section {
+    background-color: rgba(121, 117, 117, 0.6);
+    box-shadow: 1px 1px 20px #5c5c5c;
+    padding-bottom: 20px
+}
+
+.tooltip-section {
+    margin-top: 1.5em;
+    margin-bottom: .5em;
+    text-align: center;
+}
+
+.tooltiptext {
+    visibility: visible;
+    width: 20px;
+    background-color: rgb(248, 67, 67);
+    color: #fff;
+    text-align: center;
+    border-radius: 6px;
+    padding: 5px 5px;
+    font-weight: 500;
+    text-align: center;
+    z-index: 1;
+    /* Tooltip fade In*/
+    opacity: 0;
+    transition: opacity 1s;
+    /*Tooltip fade In */
+  }
+  
+  .tooltiptext::after {
+    display: inline-block;
+    transform: translate(-45px,20px);
+    content: "";
+    margin-left: -5px;
+    border-width: 5px;
+    border-style: solid;
+    border-color: rgb(248, 67, 67) transparent transparent transparent;
+  }
+
+.todo-app {
+    display: flex;
+    flex-direction: column;
+    border-radius: 10px;
+    padding: 15px 5px 0 5px;
+    width: 85vw;
+    min-height: 85vh;
+}
+
+
+legend {
+    text-align: center;
+}
+
+.title {
+    font-size: 2.2em;
+    font-weight: bold;
+    color: #1d2731;
+}
+
+.todo-app-entry {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    border: none;
+    padding: 0;
+}
+
+
+#todo-text-area{    
+    flex: 0 1 70%;
+    border-radius: 3px;
+    font-size: 1em;
+    outline: none;
+    height: 80px;
+    font-weight: 500;
+    resize: none;
+    font-family: poppins;
+    border: 1px solid rgb(40, 150, 252)
+}
+
+#todo-text-area:focus{    
+    outline: 2px solid rgb(40, 150, 252);
+}
+
+
+
+.add-button {
+    min-height: 100%;
+    max-width: 15%;
+    flex: 0 1 30%;
+    border: none;
+    background-color: rgb(40, 150, 252);
+    color: white;
+    border-radius: 5px;
+    margin-left: 10px;
+    font-size: 1em;
+    font-weight: 600;
+}
+
+
+.add-button:hover {
+    background-color: rgb(0, 132, 255);
+    cursor: pointer;
+}
+
+.completed-tasks {
+    display: none;
+    padding: 0 0 0 10px;
+    margin-top: 1em;
+}
+
+.completed-tasks summary{
+    /* display: inline; */
+    margin-bottom: .5em;
+    width: 140px;
+    background-color: rgb(56, 56, 56);
+    color: white;
+    padding: 5px 5px 5px 5px;
+    border-radius: 10px;
+}
+
+.completed-tasks summary:hover {
+    cursor: pointer;
+}
+
+.completed-tasks-lists {
+    max-height: 150px;
+    overflow: auto;
+    /* overflow-x: hidden; */
+    margin: 0;
+    padding: 0 10px 0 0;
+}
+
+.todo-lists {
+    margin-top: 1em;
+    height: 35vh;
+    overflow: auto;
+    padding: 0 10px;
+    overflow-x: hidden;
+}
+
+li {
+    margin-bottom: .5em;
+    list-style-type: none;
+    display: flex;
+}
+
+.complete {
+    text-decoration: line-through;
+}
+
+.uncomplete {
+    text-decoration: none;
+}
+
+.task {
+    flex-grow: 1;
+    margin-left: 3px;
+    font-weight: 550;
+    margin-right: 10px;
+}
+
+input[type="checkbox"] {
+    transform: scale(1.2);
+    height: 22px;
+    align-self: center;
+}
+
+input[type="checkbox"]:hover {
+    cursor: pointer;
+}
+
+.delete-button {
+    text-align: center;
+    border: none;
+    background-color: rgb(249, 56, 56);
+    color: white;
+    border-radius: 3px;
+    font-weight: bold;
+    font-size: 0.95em;
+    height: 20px;
+    align-self: center;
+}
+
+.delete-button:hover {
+    background-color: rgb(246, 10, 10);
+    cursor: pointer;
+}
+
+
+.clear-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.clear-button {
+    padding: 10px 30px;
+    border: none;
+    background-color: rgb(249, 56, 56);
+    color: white;
+    border-radius: 5px;
+    font-size: 1.2em;
+    font-weight: 600;
+}
+
+button.clear-button:hover {
+    background-color: rgb(204, 28, 28);
+    cursor: pointer;
+}
+
+/*--------------------------------------
+            Media queries
+            Responsive
+----------------------------------------*/
+@media screen and (max-width: 22.5em){
+    .todo-app{
+        max-width: 95vw;
+    }
+}
+
+@media screen and (min-width: 30em){
+    .todo-app{
+        max-width: 80vw;
+    }
+}
+
+@media screen and (min-width: 64em){
+    .todo-app{
+        max-width: 70vw;
+    }
+}
+
+@media screen and (min-width: 80em){
+    .todo-app{
+        max-width: 55vw;
+    }
+}
+
+@media screen and (min-width: 120em){
+    .todo-app{
+        max-width: 45vw;
+    }
+}

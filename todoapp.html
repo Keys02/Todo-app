@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+    <meta charset=utf-8>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+    <title>To-Do</title>
+    <link rel="stylesheet" href="todoapp.css">
+</head>
+    <body>
+        <main class="todo-app-container">
+            <section class="main-todo-section">
+                <section class="todo-app">
+                    <form>
+                        <legend><span class="title">To-Do</span></legend>
+                        <!--Tooltip-->
+                        <section class="tooltip-section">
+                            <span class="tooltiptext">Enter a todo</span>
+                        </section>
+                        <!--Tooltip-->
+                        <!--form controls section-->
+                        <fieldset class="todo-app-entry">
+                            <textarea id="todo-text-area" placeholder="Enter todo" name="task"></textarea>
+                            <input type="submit" class="add-button" value="Add">
+                        </fieldset>
+                        <!--form controls section-->
+                    </form>
+
+                    <!-- Completed tasks -->
+                    <details class="completed-tasks">
+                        <summary>Completed<span class="no-of-completed-tasks"> 0</span></summary>
+                        <ul class="completed-tasks-lists"></ul>
+                    </details>
+                    <!-- Completed tasks -->
+
+                    <!-- All tasks -->
+                    <ul class="todo-lists"></ul>
+                    <!-- All tasks -->
+                </section>
+                <section class="clear-section">
+                    <button class="clear-button">Clear</button>
+                </section>
+
+            </section>
+        </main>
+        <script src="todoapp.js"></script>
+    </body>
+</html>

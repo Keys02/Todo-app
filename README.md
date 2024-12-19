@@ -16,7 +16,7 @@ To create a MacOS or Linux version, I suggest you take at Electron forge docs
 * [Electron forge](https://www.electronforge.io/)
 
 # Learn More
-To learn more about Electron.js take at the Electron docs
+To learn more about Electron.js checkout Electron docs
 * [Electron](https://www.electronjs.org/docs/latest/)
 
 PS: You can clone this project and manipulate it however you want.

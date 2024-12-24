@@ -12,7 +12,7 @@ npm make
 ```
 
 # Creating a version for MacOS and Linux
-To create a MacOS or Linux version, I suggest you take at look Electron forge docs
+To create a MacOS or Linux version, I suggest you take a look at Electron forge docs
 * [Electron forge](https://www.electronforge.io/)
 
 # Learn More
